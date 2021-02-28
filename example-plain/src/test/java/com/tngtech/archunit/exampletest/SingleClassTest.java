@@ -9,6 +9,8 @@ import com.tngtech.archunit.example.layers.core.HighSecurity;
 import com.tngtech.archunit.example.layers.core.VeryCentralCore;
 import org.junit.Test;
 
+import java.io.Serializable;
+
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.classes;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClass;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.theClass;
@@ -45,4 +47,14 @@ public class SingleClassTest {
                 .should().notBe(VeryCentralCore.class)
                 .check(classes);
     }
+
+    @Test
+    public void foo() {
+        classes().that().areAssignableTo(Serializable.class)
+                .and().areNotEnums()
+                .and().areNotInterfaces()
+                .should(new HaveASerialVersionUIDField())
+                .check(classes);
+    }
+
 }

@@ -1,5 +1,29 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.8.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+group = 'com.tutorialspoint'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.11
+
+repositories {
+    mavenCentral()
+}
 dependencies {
     testImplementation 'junit:junit:4.12' // We will use JUnit to run the tests, but for this example it is irrelevant, might as well be TestNG
 
     testImplementation 'com.tngtech.archunit:archunit:0.15.0'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
 }

@@ -8,6 +8,9 @@ import com.tngtech.archunit.example.layers.ClassViolatingCodingRules;
 import com.tngtech.archunit.lang.CompositeArchRule;
 import org.junit.Test;
 
+import static com.tngtech.archunit.core.domain.JavaCall.Predicates.target;
+import static com.tngtech.archunit.core.domain.properties.CanBeAnnotated.Predicates.annotatedWith;
+import static com.tngtech.archunit.lang.conditions.ArchPredicates.is;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.fields;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 import static com.tngtech.archunit.library.GeneralCodingRules.ACCESS_STANDARD_STREAMS;
@@ -65,5 +68,12 @@ public class CodingRulesTest {
     public void no_classes_should_access_standard_streams_or_throw_generic_exceptions() {
         CompositeArchRule.of(NO_CLASSES_SHOULD_ACCESS_STANDARD_STREAMS)
                 .and(NO_CLASSES_SHOULD_THROW_GENERIC_EXCEPTIONS).check(classes);
+    }
+
+    @Test
+    public void foo() {
+        noClasses().should()
+                .callCodeUnitWhere(target(is(annotatedWith(Deprecated.class))))
+                .check(classes);
     }
 }

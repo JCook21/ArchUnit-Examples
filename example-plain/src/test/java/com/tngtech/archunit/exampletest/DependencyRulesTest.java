@@ -3,6 +3,7 @@ package com.tngtech.archunit.exampletest;
 import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.core.importer.ClassFileImporter;
 import com.tngtech.archunit.example.layers.ClassViolatingCodingRules;
+import com.tngtech.archunit.library.DependencyRules;
 import org.junit.Test;
 
 import static com.tngtech.archunit.library.DependencyRules.NO_CLASSES_SHOULD_DEPEND_UPPER_PACKAGES;

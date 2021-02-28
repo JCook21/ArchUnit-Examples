@@ -25,6 +25,7 @@ public class PlantUmlArchitectureTest {
 
     @Test
     public void classes_should_adhere_to_shopping_example_considering_only_dependencies_in_diagram() {
+        var plantUmlDiagram = PlantUmlArchitectureTest.class.getResource("some_exampl.puml");
         classes().should(adhereToPlantUmlDiagram(plantUmlDiagram, consideringOnlyDependenciesInDiagram()))
                 .check(classes);
     }

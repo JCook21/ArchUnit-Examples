@@ -6,11 +6,13 @@ import com.tngtech.archunit.ArchConfiguration;
 import com.tngtech.archunit.core.domain.JavaClasses;
 import com.tngtech.archunit.core.importer.ClassFileImporter;
 import com.tngtech.archunit.example.layers.ClassViolatingCodingRules;
+import com.tngtech.archunit.lang.syntax.elements.FieldsShouldConjunction;
 import com.tngtech.archunit.library.freeze.FreezingArchRule;
 import com.tngtech.archunit.library.freeze.ViolationLineMatcher;
 import com.tngtech.archunit.library.freeze.ViolationStore;
 import org.junit.Test;
 
+import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.fields;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noClasses;
 import static com.tngtech.archunit.library.freeze.FreezingArchRule.freeze;
 

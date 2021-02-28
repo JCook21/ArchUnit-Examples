@@ -3,9 +3,10 @@ package com.tngtech.archunit.example.layers;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.io.PrintWriter;
+import java.io.Serializable;
 import java.util.logging.Logger;
 
-public class ClassViolatingCodingRules {
+public class ClassViolatingCodingRules implements Serializable {
     static Logger log = Logger.getLogger("Wrong Logger"); // Violates rules not to use java.util.logging & that loggers should be private static final
 
     public void printToStandardStream() throws FileNotFoundException {

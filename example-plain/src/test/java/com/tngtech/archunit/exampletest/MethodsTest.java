@@ -6,6 +6,16 @@ import com.tngtech.archunit.example.layers.anticorruption.WrappedResult;
 import com.tngtech.archunit.example.layers.security.Secured;
 import org.junit.Test;
 
+import javax.annotation.ParametersAreNonnullByDefault;
+import javax.validation.constraints.NotNull;
+
+import java.util.Collection;
+import java.util.Map;
+import java.util.Optional;
+
+import static com.tngtech.archunit.base.DescribedPredicate.not;
+import static com.tngtech.archunit.core.domain.JavaClass.Predicates.assignableTo;
+import static com.tngtech.archunit.core.domain.properties.HasReturnType.Functions.GET_RAW_RETURN_TYPE;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.methods;
 import static com.tngtech.archunit.lang.syntax.ArchRuleDefinition.noCodeUnits;
 
@@ -27,6 +37,18 @@ public class MethodsTest {
         noCodeUnits()
                 .that().areDeclaredInClassesThat().resideInAPackage("..persistence..")
                 .should().beAnnotatedWith(Secured.class)
+                .check(classes);
+    }
+
+    @Test
+    public void foo() {
+        methods().that().arePublic()
+                .and().doNotHaveRawReturnType("void")
+                .and().areDeclaredInClassesThat().areNotAnnotatedWith(ParametersAreNonnullByDefault.class)
+                .and(GET_RAW_RETURN_TYPE.is(not(assignableTo(Collection.class))))
+                .and(GET_RAW_RETURN_TYPE.is(not(assignableTo(Map.class))))
+                .should().haveRawReturnType(Optional.class)
+                .orShould().beAnnotatedWith(NotNull.class)
                 .check(classes);
     }
 }

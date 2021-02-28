@@ -1,0 +1,99 @@
+{\rtf1\ansi \deff1{\fonttbl{\f1\fmodern\fprq1\fcharset0 Courier New;}}{\colortbl;\red255\green255\blue255;\red50\green50\blue50;\red16\green148\blue160;\red16\green148\blue160;\red150\green150\blue150;\red150\green150\blue150;\red220\green104\blue22;\red105\green199\blue58;\red16\green148\blue160;\red150\green150\blue150;\red50\green50\blue50;\red115\green118\blue196;\red59\green106\blue200;\red160\green00\blue80;\red00\green161\blue80;\red199\green58\blue105;}
+\paperw11905\paperh16837\margl1134\margr1134\margt1134\margb1134\sectd\plain\f1\fs20
+\pard \cbpat1{{\cf2{}}{\cf13{package}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{exampletest}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{base}}{\cf11{.}}{\cf2{DescribedPredicate}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{core}}{\cf11{.}}{\cf2{domain}}{\cf11{.}}{\cf2{JavaClass}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{core}}{\cf11{.}}{\cf2{domain}}{\cf11{.}}{\cf2{JavaClasses}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{core}}{\cf11{.}}{\cf2{domain}}{\cf11{.}}{\cf2{JavaField}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{core}}{\cf11{.}}{\cf2{domain}}{\cf11{.}}{\cf2{JavaModifier}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{core}}{\cf11{.}}{\cf2{domain}}{\cf11{.}}{\cf2{properties}}{\cf11{.}}{\cf2{HasModifiers}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{core}}{\cf11{.}}{\cf2{domain}}{\cf11{.}}{\cf2{properties}}{\cf11{.}}{\cf2{HasName}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{core}}{\cf11{.}}{\cf2{domain}}{\cf11{.}}{\cf2{properties}}{\cf11{.}}{\cf2{HasType}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{core}}{\cf11{.}}{\cf2{importer}}{\cf11{.}}{\cf2{ClassFileImporter}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{example}}{\cf11{.}}{\cf2{layers}}{\cf11{.}}{\cf2{ClassViolatingCodingRules}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{example}}{\cf11{.}}{\cf2{layers}}{\cf11{.}}{\cf2{SomeOtherBusinessInterface}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{example}}{\cf11{.}}{\cf2{layers}}{\cf11{.}}{\cf2{core}}{\cf11{.}}{\cf2{CoreSatellite}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{example}}{\cf11{.}}{\cf2{layers}}{\cf11{.}}{\cf2{core}}{\cf11{.}}{\cf2{HighSecurity}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{example}}{\cf11{.}}{\cf2{layers}}{\cf11{.}}{\cf2{core}}{\cf11{.}}{\cf2{VeryCentralCore}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{lang}}{\cf11{.}}{\cf2{ArchCondition}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{lang}}{\cf11{.}}{\cf2{ConditionEvents}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{lang}}{\cf11{.}}{\cf2{SimpleConditionEvent}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{org}}{\cf11{.}}{\cf2{junit}}{\cf11{.}}{\cf2{Test}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{java}}{\cf11{.}}{\cf2{io}}{\cf11{.}}{\cf2{Serializable}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{java}}{\cf11{.}}{\cf2{util}}{\cf11{.}}{\cf2{Set}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import}} {\cf2{java}}{\cf11{.}}{\cf2{util}}{\cf11{.}}{\cf2{function}}{\cf11{.}}{\cf2{Predicate}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import static}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{lang}}{\cf11{.}}{\cf2{syntax}}{\cf11{.}}{\cf2{ArchRuleDefinition}}{\cf11{.}}{\cf2{classes}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import static}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{lang}}{\cf11{.}}{\cf2{syntax}}{\cf11{.}}{\cf2{ArchRuleDefinition}}{\cf11{.}}{\cf2{noClass}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{import static}} {\cf2{com}}{\cf11{.}}{\cf2{tngtech}}{\cf11{.}}{\cf2{archunit}}{\cf11{.}}{\cf2{lang}}{\cf11{.}}{\cf2{syntax}}{\cf11{.}}{\cf2{ArchRuleDefinition}}{\cf11{.}}{\cf2{theClass}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}}\par\pard
+\cbpat1{{\cf2{}}{\cf13{public class}} {\cf2{SingleClassTest}} {\cf11{\{}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf13{private static final}} {\cf2{JavaClasses classes}} {\cf11{=}} {\cf2{}}{\cf13{new}} {\cf2{}}{\cf16{ClassFileImporter}}{\cf2{}}{\cf11{().}}{\cf2{}}{\cf16{importPackagesOf}}{\cf2{}}{\cf11{(}}{\cf2{ClassViolatingCodingRules}}{\cf11{.}}{\cf2{}}{\cf13{class}}{\cf2{}}{\cf11{);}}}\par\pard
+\cbpat1{{\cf2{}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf15{@Test}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf13{public void}} {\cf2{}}{\cf16{core_should_only_be_accessed_by_satellites}}{\cf2{}}{\cf11{() \{}}}\par\pard
+\cbpat1{{\cf2{}}        {\cf16{theClass}}{\cf2{}}{\cf11{(}}{\cf2{VeryCentralCore}}{\cf11{.}}{\cf2{}}{\cf13{class}}{\cf2{}}{\cf11{)}}}\par\pard
+\cbpat1{{\cf2{}}                {\cf11{.}}{\cf2{}}{\cf16{should}}{\cf2{}}{\cf11{().}}{\cf2{}}{\cf16{onlyBeAccessed}}{\cf2{}}{\cf11{().}}{\cf2{}}{\cf16{byClassesThat}}{\cf2{}}{\cf11{().}}{\cf2{}}{\cf16{implement}}{\cf2{}}{\cf11{(}}{\cf2{CoreSatellite}}{\cf11{.}}{\cf2{}}{\cf13{class}}{\cf2{}}{\cf11{)}}}\par\pard
+\cbpat1{{\cf2{}}                {\cf11{.}}{\cf2{}}{\cf16{check}}{\cf2{}}{\cf11{(}}{\cf2{classes}}{\cf11{);}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf11{\}}}}\par\pard
+\cbpat1{{\cf2{}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf15{@Test}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf13{public void}} {\cf2{}}{\cf16{core_should_only_access_classes_in_core_itself}}{\cf2{}}{\cf11{() \{}}}\par\pard
+\cbpat1{{\cf2{}}        {\cf16{noClass}}{\cf2{}}{\cf11{(}}{\cf2{VeryCentralCore}}{\cf11{.}}{\cf2{}}{\cf13{class}}{\cf2{}}{\cf11{)}}}\par\pard
+\cbpat1{{\cf2{}}                {\cf11{.}}{\cf2{}}{\cf16{should}}{\cf2{}}{\cf11{().}}{\cf2{}}{\cf16{accessClassesThat}}{\cf2{}}{\cf11{().}}{\cf2{}}{\cf16{resideOutsideOfPackages}}{\cf2{}}{\cf11{(}}{\cf2{}}{\cf3{"..core.."}}{\cf2{}}{\cf11{,}} {\cf2{}}{\cf3{"java.."}}{\cf2{}}{\cf11{)}}}\par\pard
+\cbpat1{{\cf2{}}                {\cf11{.}}{\cf2{}}{\cf16{check}}{\cf2{}}{\cf11{(}}{\cf2{classes}}{\cf11{);}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf11{\}}}}\par\pard
+\cbpat1{{\cf2{}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf15{@Test}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf13{public void}} {\cf2{}}{\cf16{the_only_class_with_high_security_is_central_core}}{\cf2{}}{\cf11{() \{}}}\par\pard
+\cbpat1{{\cf2{}}        {\cf16{classes}}{\cf2{}}{\cf11{()}}}\par\pard
+\cbpat1{{\cf2{}}                {\cf11{.}}{\cf2{}}{\cf16{that}}{\cf2{}}{\cf11{().}}{\cf2{}}{\cf16{areAnnotatedWith}}{\cf2{}}{\cf11{(}}{\cf2{HighSecurity}}{\cf11{.}}{\cf2{}}{\cf13{class}}{\cf2{}}{\cf11{)}}}\par\pard
+\cbpat1{{\cf2{}}                {\cf11{.}}{\cf2{}}{\cf16{should}}{\cf2{}}{\cf11{().}}{\cf2{}}{\cf16{be}}{\cf2{}}{\cf11{(}}{\cf2{VeryCentralCore}}{\cf11{.}}{\cf2{}}{\cf13{class}}{\cf2{}}{\cf11{)}}}\par\pard
+\cbpat1{{\cf2{}}                {\cf11{.}}{\cf2{}}{\cf16{check}}{\cf2{}}{\cf11{(}}{\cf2{classes}}{\cf11{);}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf11{\}}}}\par\pard
+\cbpat1{{\cf2{}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf15{@Test}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf13{public void}} {\cf2{}}{\cf16{central_core_should_not_implement_some_business_interface}}{\cf2{}}{\cf11{() \{}}}\par\pard
+\cbpat1{{\cf2{}}        {\cf16{classes}}{\cf2{}}{\cf11{()}}}\par\pard
+\cbpat1{{\cf2{}}                {\cf11{.}}{\cf2{}}{\cf16{that}}{\cf2{}}{\cf11{().}}{\cf2{}}{\cf16{implement}}{\cf2{}}{\cf11{(}}{\cf2{SomeOtherBusinessInterface}}{\cf11{.}}{\cf2{}}{\cf13{class}}{\cf2{}}{\cf11{)}}}\par\pard
+\cbpat1{{\cf2{}}                {\cf11{.}}{\cf2{}}{\cf16{should}}{\cf2{}}{\cf11{().}}{\cf2{}}{\cf16{notBe}}{\cf2{}}{\cf11{(}}{\cf2{VeryCentralCore}}{\cf11{.}}{\cf2{}}{\cf13{class}}{\cf2{}}{\cf11{)}}}\par\pard
+\cbpat1{{\cf2{}}                {\cf11{.}}{\cf2{}}{\cf16{check}}{\cf2{}}{\cf11{(}}{\cf2{classes}}{\cf11{);}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf11{\}}}}\par\pard
+\cbpat1{{\cf2{}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf15{@Test}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf13{public void}} {\cf2{}}{\cf16{foo}}{\cf2{}}{\cf11{() \{}}}\par\pard
+\cbpat1{{\cf2{}}        {\cf16{classes}}{\cf2{}}{\cf11{().}}{\cf2{}}{\cf16{that}}{\cf2{}}{\cf11{().}}{\cf2{}}{\cf16{areAssignableTo}}{\cf2{}}{\cf11{(}}{\cf2{Serializable}}{\cf11{.}}{\cf2{}}{\cf13{class}}{\cf2{}}{\cf11{)}}}\par\pard
+\cbpat1{{\cf2{}}                {\cf11{.}}{\cf2{}}{\cf16{and}}{\cf2{}}{\cf11{().}}{\cf2{}}{\cf16{areNotEnums}}{\cf2{}}{\cf11{()}}}\par\pard
+\cbpat1{{\cf2{}}                {\cf11{.}}{\cf2{}}{\cf16{and}}{\cf2{}}{\cf11{().}}{\cf2{}}{\cf16{areNotInterfaces}}{\cf2{}}{\cf11{()}}}\par\pard
+\cbpat1{{\cf2{}}                {\cf11{.}}{\cf2{}}{\cf16{should}}{\cf2{}}{\cf11{(}}{\cf2{}}{\cf13{new}} {\cf2{}}{\cf16{HaveASerialVersionUIDField}}{\cf2{}}{\cf11{())}}}\par\pard
+\cbpat1{{\cf2{}}                {\cf11{.}}{\cf2{}}{\cf16{check}}{\cf2{}}{\cf11{(}}{\cf2{classes}}{\cf11{);}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf11{\}}}}\par\pard
+\cbpat1{{\cf2{}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf6{/**}}}\par\pard
+\cbpat1{{\cf6{     * This ArchCondition checks that a class has a serialVersionUID field that is valid for use with Serializable classes.}}}\par\pard
+\cbpat1{{\cf6{     */}}{\cf2{}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf13{private static final class}} {\cf2{HaveASerialVersionUIDField}} {\cf13{extends}} {\cf2{ArchCondition}}{\cf11{<}}{\cf2{JavaClass}}{\cf11{> \{}}}\par\pard
+\cbpat1{{\cf2{}}}\par\pard
+\cbpat1{{\cf2{}}        {\cf13{private}} {\cf2{}}{\cf16{HaveASerialVersionUIDField}}{\cf2{}}{\cf11{() \{}}}\par\pard
+\cbpat1{{\cf2{}}            {\cf13{super}}{\cf2{}}{\cf11{(}}{\cf2{}}{\cf3{"have a valid serialVersionUID field"}}{\cf2{}}{\cf11{);}}}\par\pard
+\cbpat1{{\cf2{}}        {\cf11{\}}}}\par\pard
+\cbpat1{{\cf2{}}}\par\pard
+\cbpat1{{\cf2{}}        {\cf15{@Override}}}\par\pard
+\cbpat1{{\cf2{}}        {\cf13{public void}} {\cf2{}}{\cf16{check}}{\cf2{}}{\cf11{(}}{\cf2{JavaClass item}}{\cf11{,}} {\cf2{ConditionEvents events}}{\cf11{) \{}}}\par\pard
+\cbpat1{{\cf2{            DescribedPredicate}}{\cf11{<}}{\cf2{HasModifiers}}{\cf11{>}} {\cf2{isStatic}} {\cf11{=}} {\cf2{HasModifiers}}{\cf11{.}}{\cf2{Predicates}}{\cf11{.}}{\cf2{}}{\cf16{modifier}}{\cf2{}}{\cf11{(}}{\cf2{JavaModifier}}{\cf11{.}}{\cf2{STATIC}}{\cf11{);}}}\par\pard
+\cbpat1{{\cf2{            DescribedPredicate}}{\cf11{<}}{\cf2{HasModifiers}}{\cf11{>}} {\cf2{isFinal}} {\cf11{=}} {\cf2{HasModifiers}}{\cf11{.}}{\cf2{Predicates}}{\cf11{.}}{\cf2{}}{\cf16{modifier}}{\cf2{}}{\cf11{(}}{\cf2{JavaModifier}}{\cf11{.}}{\cf2{FINAL}}{\cf11{);}}}\par\pard
+\cbpat1{{\cf2{            DescribedPredicate}}{\cf11{<}}{\cf2{HasType}}{\cf11{>}} {\cf2{hasLongType}} {\cf11{=}} {\cf2{HasType}}{\cf11{.}}{\cf2{Predicates}}{\cf11{.}}{\cf2{}}{\cf16{rawType}}{\cf2{}}{\cf11{(}}{\cf2{}}{\cf3{"long"}}{\cf2{}}{\cf11{);}}}\par\pard
+\cbpat1{{\cf2{}}            {\cf13{var}} {\cf2{errorMessage}} {\cf11{=}} {\cf2{item}}{\cf11{.}}{\cf2{}}{\cf16{getName}}{\cf2{}}{\cf11{() +}} {\cf2{}}{\cf3{" does not contain a valid serialVersionUID field"}}{\cf2{}}{\cf11{;}}}\par\pard
+\cbpat1{{\cf2{}}            {\cf13{try}} {\cf2{}}{\cf11{\{}}}\par\pard
+\cbpat1{{\cf2{}}                {\cf13{var}} {\cf2{field}} {\cf11{=}} {\cf2{item}}{\cf11{.}}{\cf2{}}{\cf16{getField}}{\cf2{}}{\cf11{(}}{\cf2{}}{\cf3{"serialVersionUID"}}{\cf2{}}{\cf11{);}}}\par\pard
+\cbpat1{{\cf2{}}                {\cf13{var}} {\cf2{hasValidSerialVersionUID}} {\cf11{=}} {\cf2{isStatic}}{\cf11{.}}{\cf2{}}{\cf16{apply}}{\cf2{}}{\cf11{(}}{\cf2{field}}{\cf11{) &&}} {\cf2{isFinal}}{\cf11{.}}{\cf2{}}{\cf16{apply}}{\cf2{}}{\cf11{(}}{\cf2{field}}{\cf11{) &&}} {\cf2{hasLongType}}{\cf11{.}}{\cf2{}}{\cf16{apply}}{\cf2{}}{\cf11{(}}{\cf2{field}}{\cf11{);}}}\par\pard
+\cbpat1{{\cf2{                events}}{\cf11{.}}{\cf2{}}{\cf16{add}}{\cf2{}}{\cf11{(}}{\cf2{}}{\cf13{new}} {\cf2{}}{\cf16{SimpleConditionEvent}}{\cf2{}}{\cf11{(}}{\cf2{item}}{\cf11{,}} {\cf2{hasValidSerialVersionUID}}{\cf11{,}} {\cf2{errorMessage}}{\cf11{));}}}\par\pard
+\cbpat1{{\cf2{}}            {\cf11{\}}} {\cf2{}}{\cf13{catch}} {\cf2{}}{\cf11{(}}{\cf2{IllegalArgumentException e}}{\cf11{) \{}}}\par\pard
+\cbpat1{{\cf2{                events}}{\cf11{.}}{\cf2{}}{\cf16{add}}{\cf2{}}{\cf11{(}}{\cf2{SimpleConditionEvent}}{\cf11{.}}{\cf2{}}{\cf16{violated}}{\cf2{}}{\cf11{(}}{\cf2{item}}{\cf11{,}} {\cf2{errorMessage}}{\cf11{));}}}\par\pard
+\cbpat1{{\cf2{}}            {\cf11{\}}}}\par\pard
+\cbpat1{{\cf2{}}        {\cf11{\}}}}\par\pard
+\cbpat1{{\cf2{}}    {\cf11{\}}}}\par\pard
+\cbpat1{{\cf2{}}{\cf11{\}}}{\cf2{}}}\par\pard
+\cbpat1{}}
